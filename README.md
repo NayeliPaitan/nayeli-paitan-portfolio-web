@@ -39,20 +39,11 @@ Si deseas clonar y ejecutar este proyecto localmente en tu máquina:
 3. Abre la aplicación:
 Abre el archivo index.html en tu navegador de preferencia o utiliza la extensión Live Server en Visual Studio Code.
 
-3. 📬 Contacto
-Nayeli Paitan
+3. 📬 Contacto - Nayeli Paitan
 
-LinkedIn: https://www.linkedin.com/in/nayeli-alison-paitan-ramirez/(https://www.linkedin.com/in/nayeli-alison-paitan-ramirez/)
+LinkedIn: https://www.linkedin.com/in/nayeli-alison-paitan-ramirez/
 
 GitHub: @NayeliPaitan
 
 📜 Licencia
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más información.
-
-
-***
-
-**Cómo agregarlo a tu proyecto:**
-1. En la página de tu repositorio en GitHub, haz clic en el archivo `README.md` y selecciona el icono del lápiz (**Edit**).
-2. Borra el texto por defecto, pega todo este bloque de código y personaliza tus enlaces (como el de tu LinkedIn).
-3. Haz clic en el botón verde **Commit changes...** abajo a la derecha.
