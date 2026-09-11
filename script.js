@@ -1,5 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── MENÚ MÓVIL (HAMBURGUESA) ──
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const navSocial = document.querySelector('.nav-social');
+
+  function closeMenu() {
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Abrir menú');
+    navMenu.classList.remove('active');
+    if (navSocial) navSocial.classList.remove('active');
+    document.body.classList.remove('nav-open');
+  }
+
+  function openMenu() {
+    navToggle.setAttribute('aria-expanded', 'true');
+    navToggle.setAttribute('aria-label', 'Cerrar menú');
+    navMenu.classList.add('active');
+    if (navSocial) navSocial.classList.add('active');
+    document.body.classList.add('nav-open');
+  }
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      isOpen ? closeMenu() : openMenu();
+    });
+
+    // Cierra el menú al hacer clic en un enlace
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Cierra el menú al hacer clic fuera de él
+    document.addEventListener('click', e => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      if (!isOpen) return;
+      const clickedInsideMenu = navMenu.contains(e.target) || navToggle.contains(e.target) || (navSocial && navSocial.contains(e.target));
+      if (!clickedInsideMenu) closeMenu();
+    });
+
+    // Cierra el menú al redimensionar a escritorio
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) closeMenu();
+    });
+
+    // Cierra el menú con la tecla Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
+
   // ── CURSOR INTERACTIVO ──
   const cursor = document.getElementById('cursor');
   const ring   = document.getElementById('cursor-ring');
