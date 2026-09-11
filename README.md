@@ -1,4 +1,4 @@
-# 🌐 Portafolio Web Interactivo
+# 🌐 Portafolio Web
 
 Un sitio web de portafolio personal moderno y responsive, diseñado para presentar proyectos y habilidades de desarrollo web con una experiencia visual dinámica.
 
