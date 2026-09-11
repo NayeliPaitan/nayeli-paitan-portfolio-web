@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nayeli Paitan — Blake Dev</title>
+    <link rel="icon" type="image/png"
+        href="data:image/png;base64,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VPZTHzUx3RHmh54OfqqqrnmqnWXxzOvWQBVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//2Q==" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="data:image/png;base64,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VPZTHzUx3RHmh54OfqqqrnmqnWXxzOvWQBVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//2Q=="
+                alt="{NP}" />
+        </a>
+        <ul class="nav-links">
+            <li><a href="#sobre">Sobre mí</a></li>
+            <li><a href="#skills-section">Skills</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="nav-social">
+            <a href="https://linkedin.com/in/nayeli-alison-paitan-ramirez/" target="_blank" title="LinkedIn"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/NayeliPaitan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/51950595875" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:paitannayeli@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" style="max-width:none; padding:0;">
+        <canvas id="hero-canvas"></canvas>
+
+        <div class="hero-content">
+            <!-- Badge de disponibilidad -->
+            <div class="hero-badge">
+                <span class="status-dot"></span>
+                Disponible para nuevos proyectos
+            </div>
+
+            <!-- Nombre principal -->
+            <h1 class="hero-name">
+                <span class="line1">Nayeli</span>
+                <span class="line2">Paitan</span>
+            </h1>
+
+            <!-- Rol profesional -->
+            <p class="hero-role">
+                Ing. de Sistemas · <span>Desarrollo Web</span> · Datos &amp; Automatización
+            </p>
+
+            <!-- Llamadas a la acción (CTA) -->
+            <div class="hero-cta">
+                <a href="#contacto" class="btn btn-primary">Contáctame</a>
+                <a href="#proyectos" class="btn btn-secondary">Ver Proyectos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="sobre" class="reveal">
+        <div class="about-info">
+            <div class="section-tag">// 01 — Sobre mí</div>
+            <h2 class="section-title">
+                Hola, soy <span class="highlight">Nayeli Paitan</span>
+            </h2>
+
+            <div class="about-text">
+                <p>
+                    Soy <strong>Ingeniera de Sistemas e Informática</strong> enfocada en el desarrollo de
+                    soluciones digitales, <strong>automatización de procesos</strong> y <strong>análisis de
+                        datos.</strong>
+                </p>
+                <p>
+                    Cuento con experiencia construyendo aplicaciones web dinámicas con <strong>Vue.js y
+                        Node.js</strong>, optimizando flujos de trabajo con <strong>n8n y APIs REST</strong>, y
+                    gestionando datos a gran escala con <strong>SQL y Snowflake.</strong>
+                </p>
+                <p>
+                    Mi objetivo es <strong>transformar requerimientos complejos en soluciones eficientes y
+                        automatizadas</strong> que generen un impacto real en el negocio y mejoren la experiencia
+                    operativa.
+                </p>
+            </div>
+        </div>
+
+        <!-- Grid de Métricas y Stack -->
+        <div class="about-stats">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                <span class="stat-num">2+</span>
+                <span class="stat-label">Años de experiencia</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+                <span class="stat-num">8+</span>
+                <span class="stat-label">Proyectos & Clientes</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Procesos optimizados</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+                <span class="stat-num">15+</span>
+                <span class="stat-label">Tecnologías integradas</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+    <!-- SKILLS -->
+    <section id="skills-section" class="reveal">
+        <div class="skills-header">
+            <div class="section-tag">// 02 — Stack técnico</div>
+            <h2 class="section-title">Mis <em>tecnologías</em></h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+
+            <!-- Frontend -->
+            <div class="skill-cat">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon"><i class="fas fa-desktop"></i></div>
+                    <h3 class="skill-cat-title">Frontend</h3>
+                </div>
+                <div class="skill-icons">
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML5" /><span>HTML5</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS3" /><span>CSS3</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript" /><span>JavaScript</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                            alt="Vue.js" /><span>Vue.js</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                            alt="Tailwind" /><span>Tailwind</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap" /><span>Bootstrap</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg"
+                            alt="WordPress" /><span>WordPress</span></div>
+                </div>
+            </div>
+
+            <!-- Backend & Automatización -->
+            <div class="skill-cat">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon"><i class="fas fa-cogs"></i></div>
+                    <h3 class="skill-cat-title">Backend & Automatización</h3>
+                </div>
+                <div class="skill-icons">
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js" /><span>Node.js</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python" /><span>Python</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                            alt="PHP" /><span>PHP</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                            alt="Java" /><span>Java</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://skills.syvixor.com/api/icons?i=n8n&perline=15&radius=40"
+                            alt="n8n" /><span>n8n</span>
+                    </div>
+                    <div class="skill-icon-item"><img src="https://www.vectorlogo.zone/logos/whatsapp/whatsapp-icon.svg"
+                            alt="WhatsApp API" /><span>WA API</span></div>
+                </div>
+            </div>
+
+            <!-- Bases de Datos -->
+            <div class="skill-cat">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
+                    <h3 class="skill-cat-title">Bases de Datos</h3>
+                </div>
+                <div class="skill-icons">
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                            alt="PostgreSQL" /><span>PostgreSQL</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            alt="MySQL" /><span>MySQL</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                            alt="MongoDB" /><span>MongoDB</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+                            alt="SQL Server" /><span>SQL Server</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://www.vectorlogo.zone/logos/snowflake/snowflake-icon.svg"
+                            alt="Snowflake" /><span>Snowflake</span></div>
+                </div>
+            </div>
+
+            <!-- Cloud & DevOps -->
+            <div class="skill-cat">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon"><i class="fas fa-cloud"></i></div>
+                    <h3 class="skill-cat-title">Cloud & DevOps</h3>
+                </div>
+                <div class="skill-icons">
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                            alt="Docker" /><span>Docker</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                            alt="Git" /><span>Git</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="GitHub" class="icon-dark-mode" /><span>GitHub</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                            alt="Linux" /><span>Linux</span></div>
+                </div>
+            </div>
+
+            <!-- Datos & Analytics -->
+            <div class="skill-cat">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3 class="skill-cat-title">Datos & Analytics</h3>
+                </div>
+                <div class="skill-icons">
+                    <div class="skill-icon-item"><img
+                            src="https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-icon.svg"
+                            alt="Power BI" /><span>Power BI</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                            alt="Google Analytics" /><span>GA4</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://skills.syvixor.com/api/icons?i=microsoftexcel&perline=12&radius=40"
+                            alt="Excel" /><span>Excel</span></div>
+                </div>
+            </div>
+
+            <!-- Herramientas & Metodologías -->
+            <div class="skill-cat">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
+                    <h3 class="skill-cat-title">Herramientas & Metodologías</h3>
+                </div>
+                <div class="skill-icons">
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                            alt="VSCode" /><span>VS Code</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                            alt="Figma" /><span>Figma</span></div>
+                    <div class="skill-icon-item"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+                            alt="Jira" /><span>Jira</span></div>
+                </div>
+
+                <div class="skill-tags-group">
+                    <span class="skill-tag">Scrum</span>
+                    <span class="skill-tag">ISO 27001</span>
+                    <span class="skill-tag">Odoo ERP</span>
+                    <span class="skill-tag">UML / Bizagi</span>
+                    <span class="skill-tag">Blackboard LMS</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="divider" style="max-width:1100px;"></div>
+    <!-- EXPERIENCE -->
+    <section id="experiencia" class="reveal" style="max-width:1100px;">
+        <div class="section-tag">// 03 — Experiencia</div>
+        <h2 class="section-title">Trayectoria <em>profesional</em></h2>
+        <div class="section-line"></div>
+
+        <div class="timeline">
+
+            <!-- CDLATAM (Tu rol más reciente) -->
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-date">Dic 2025 – Jul 2026</div>
+                    <div class="exp-country">🌎 Remoto / Internacional</div>
+                </div>
+                <div class="exp-role">Frontend Web Developer (Freelance)</div>
+                <div class="exp-company">CDLATAM (IPTV)</div>
+                <ul class="exp-bullets">
+                    <li>Desarrollo y mantenimiento de aplicaciones web dinámicas utilizando <strong>Vue.js</strong> para
+                        el panel administrativo.</li>
+                    <li>Integración de <strong>APIs REST</strong> complejas para la gestión y control de señales y
+                        contenido audiovisual en tiempo real.</li>
+                    <li>Construcción de interfaces 100% responsivas y resolución de incidencias en colaboración directa
+                        con equipos de backend y soporte.</li>
+                </ul>
+                <div class="exp-tech">
+                    <span class="tech-chip">Vue.js</span>
+                    <span class="tech-chip">JavaScript</span>
+                    <span class="tech-chip">REST API</span>
+                    <span class="tech-chip">HTML5 / CSS3</span>
+                    <span class="tech-chip">Git</span>
+                </div>
+            </div>
+
+            <!-- LIMA 405 -->
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-date">Feb 2025 – Ago 2025</div>
+                    <div class="exp-country">🇨🇱 Chile</div>
+                </div>
+                <div class="exp-role">Web Developer</div>
+                <div class="exp-company">LIMA 405</div>
+                <ul class="exp-bullets">
+                    <li>Gestión, administración de infraestructura de correos corporativos y vinculación completa con
+                        <strong>Google Workspace</strong>.
+                    </li>
+                    <li>Desarrollo y optimización continua de la plataforma web del restaurante .</li>
+                    <li>Implementación de mejoras en la infraestructura digital y posicionamiento SEO para fortalecer la
+                        presencia online.</li>
+                </ul>
+                <div class="exp-tech">
+                    <span class="tech-chip">WordPress</span>
+                    <span class="tech-chip">Elementor</span>
+                    <span class="tech-chip">JavaScript</span>
+                    <span class="tech-chip">Google Workspace</span>
+                    <span class="tech-chip">SEO</span>
+                </div>
+            </div>
+
+            <!-- MARKETEATEPE -->
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-date">Sep 2024 – Dic 2024</div>
+                    <div class="exp-country">🇵🇪 Perú</div>
+                </div>
+                <div class="exp-role">Web Developer</div>
+                <div class="exp-company">MARKETEATEPE</div>
+                <ul class="exp-bullets">
+                    <li>Desarrollo e integración de un <strong>Bot de WhatsApp Business mediante n8n</strong> y APIs,
+                        automatizando la captación y atención de clientes.</li>
+                    <li>Construcción de flujos automatizados para reducir la carga de tareas manuales operativas del
+                        equipo de marketing.</li>
+                    <li>Optimización de velocidad y seguimiento de analítica digital con Google Analytics para maximizar
+                        conversiones.</li>
+                </ul>
+                <div class="exp-tech">
+                    <span class="tech-chip">n8n</span>
+                    <span class="tech-chip">WhatsApp API</span>
+                    <span class="tech-chip">WordPress</span>
+                    <span class="tech-chip">Google Analytics</span>
+                    <span class="tech-chip">SEO</span>
+                </div>
+            </div>
+
+            <!-- ASOC. CIVIL UCH -->
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-date">Ago 2024</div>
+                    <div class="exp-country">🇵🇪 Perú</div>
+                </div>
+                <div class="exp-role">Asistente de Educación Virtual</div>
+                <div class="exp-company">ASOC. CIVIL UCH</div>
+                <ul class="exp-bullets">
+                    <li>Desarrollo de scripts y consultas analíticas en <strong>Snowflake SQL</strong> para el
+                        procesamiento masivo de datos.</li>
+                    <li>Administración de plataformas virtuales en Blackboard LMS y generación de dashboards en Power
+                        BI.</li>
+                </ul>
+                <div class="exp-tech">
+                    <span class="tech-chip">Snowflake SQL</span>
+                    <span class="tech-chip">Power BI</span>
+                    <span class="tech-chip">Blackboard LMS</span>
+                </div>
+            </div>
+
+            <!-- PROYECTO ARTIVISION & AKEMI -->
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-date">Abr 2024 – Jul 2024</div>
+                    <div class="exp-country">🇵🇪 Perú</div>
+                </div>
+                <div class="exp-role">Web Developer (Freelance)</div>
+                <div class="exp-company">Importaciones Akemi & Proyecto ARTIVISION (Cibertec)</div>
+                <ul class="exp-bullets">
+                    <li>Desarrollo, aseguramiento de rendimiento y mantenimiento continuo de plataformas
+                        e-commerce/corporativas.</li>
+                    <li>Implementación de protocolos de seguridad web y SEO técnico para mejorar el posicionamiento en
+                        buscadores.</li>
+                </ul>
+                <div class="exp-tech">
+                    <span class="tech-chip">WordPress</span>
+                    <span class="tech-chip">JavaScript</span>
+                    <span class="tech-chip">SEO Técnico</span>
+                </div>
+            </div>
+
+            <!-- QAMYANAPANKI -->
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-date">Jun 2023 – Dic 2023</div>
+                    <div class="exp-country">🇵🇪 Perú</div>
+                </div>
+                <div class="exp-role">Docente Capacitadora — Curso WordPress</div>
+                <div class="exp-company">ONG Qamyanapanki</div>
+                <ul class="exp-bullets">
+                    <li>Diseño curricular y dictado del taller práctico de desarrollo web con WordPress, HTML5 y
+                        CSS3.</li>
+                    <li>Acompañamiento y preparación de material didáctico técnico orientado al aprendizaje
+                        práctico.</li>
+                </ul>
+                <div class="exp-tech">
+                    <span class="tech-chip">WordPress</span>
+                    <span class="tech-chip">HTML5 / CSS3</span>
+                    <span class="tech-chip">Capacitación</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="divider" style="max-width:1100px;"></div>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="reveal" style="max-width:1100px; margin-top: 3rem;">
+        <div class="section-tag">// 05 — Portafolio</div>
+        <h2 class="section-title">Mis <em>Proyectos</em></h2>
+        <div class="section-line"></div>
+
+        <!-- CATEGORÍA 1: APLICACIONES & SAAS -->
+        <h3 style="color: var(--white); margin: 2rem 0 1rem 0;"><i class="fas fa-rocket"></i> Aplicaciones & SaaS</h3>
+        <div class="projects-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+
+            <!-- Invex -->
+            <div class="project-card"
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 0.5rem;">Invex <span
+                            style="font-size:0.75rem; color:#888;">(SaaS)</span></h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Sistema multi-empresa con panel de superadmin para
+                        gestión de inventario y módulo de ventas.</p>
+                    <div class="brand-pills" style="margin-top: 1rem;">
+                        <span class="brand-pill"><i class="fab fa-python"></i> FastAPI</span>
+                        <span class="brand-pill"><i class="fab fa-react"></i> React</span>
+                        <span class="brand-pill"><i class="fab fa-docker"></i> Docker</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+                    <a href="https://tu-demo-invex.com" target="_blank" rel="noopener" class="cert-link"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i class="fas fa-external-link-alt"></i> Ver
+                        Demo</a>
+                    <a href="#capturas-invex" class="cert-link"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.85rem; background: rgba(255,255,255,0.1);"><i
+                            class="fas fa-images"></i> Capturas</a>
+                </div>
+            </div>
+
+            <!-- Nodus Mobile -->
+            <div class="project-card"
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 0.5rem;">Nodus Mobile <span
+                            style="font-size:0.75rem; color:#f39c12;">En Desarrollo</span></h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Aplicación móvil multiplataforma desarrollada en Flutter.
+                    </p>
+                    <div class="brand-pills" style="margin-top: 1rem;">
+                        <span class="brand-pill"><i class="fas fa-mobile-alt"></i> Flutter</span>
+                        <span class="brand-pill"><i class="fas fa-code"></i> Dart</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+                    <a href="#capturas-nodus-mobile" class="cert-link"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.85rem; background: rgba(255,255,255,0.1);"><i
+                            class="fas fa-images"></i> Ver Capturas</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CATEGORÍA 2: LANDING PAGES & SITIOS WEB -->
+        <h3 style="color: var(--white); margin: 2.5rem 0 1rem 0;"><i class="fas fa-laptop-code"></i> Webs & Landings
+        </h3>
+        <div class="projects-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+
+            <!-- Nodus Website -->
+            <div class="project-card"
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 0.5rem;">Nodus App Website</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Sitio web oficial de presentación para la plataforma
+                        Nodus.</p>
+                    <div class="brand-pills" style="margin-top: 1rem;">
+                        <span class="brand-pill"><i class="fab fa-html5"></i> HTML5/CSS3</span>
+                        <span class="brand-pill"><i class="fab fa-js"></i> JavaScript</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+                    <a href="https://nayelipaitan.github.io/appnodus/" target="_blank" rel="noopener" class="cert-link"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i class="fas fa-globe"></i> Ver Website</a>
+                    <a href="https://github.com/NayeliPaitan/appnodus" class="cert-link"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.85rem; background: rgba(255,255,255,0.1);"><i
+                            class="fas fa-images"></i> Capturas</a>
+                </div>
+            </div>
+
+            <!-- Botica Sana Sana -->
+            <div class="project-card"
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 0.5rem;">Botica Sana Sana</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Sitio web institucional para la farmacia y botica Sana
+                        Sana.</p>
+                    <div class="brand-pills" style="margin-top: 1rem;">
+                        <span class="brand-pill"><i class="fas fa-globe"></i> Web Site</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+                    <a href="https://tu-demo-sanasana.com" target="_blank" rel="noopener" class="cert-link"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i class="fas fa-globe"></i> Ver Website</a>
+                    <a href="#capturas-sanasana" class="cert-link"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.85rem; background: rgba(255,255,255,0.1);"><i
+                            class="fas fa-images"></i> Capturas</a>
+                </div>
+            </div>
+
+            <!-- Nablamasa -->
+            <div class="project-card"
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 0.5rem;">Nablamasa</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Landing page corporativa para empresa constructora.</p>
+                    <div class="brand-pills" style="margin-top: 1rem;">
+                        <span class="brand-pill"><i class="fas fa-building"></i> Landing Page</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+                    <a href="#capturas-nablamasa" class="cert-link"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.85rem; background: rgba(255,255,255,0.1);"><i
+                            class="fas fa-images"></i> Ver Capturas</a>
+                </div>
+            </div>
+
+            <!-- Blake Dev -->
+            <div class="project-card"
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 0.5rem;">Blake Dev</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Estructura y diseño para marca personal de desarrollo.
+                    </p>
+                    <div class="brand-pills" style="margin-top: 1rem;">
+                        <span class="brand-pill"><i class="fas fa-user-ninja"></i> Personal Brand</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+                    <a href="https://tu-demo-blakedev.com" target="_blank" rel="noopener" class="cert-link"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i class="fas fa-external-link-alt"></i> Ver
+                        Demo</a>
+                </div>
+            </div>
+
+            <!-- Tx-Channel -->
+            <div class="project-card"
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 0.5rem;">Tx-Channel</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Plataforma / canal de transmisión de datos.</p>
+                    <div class="brand-pills" style="margin-top: 1rem;">
+                        <span class="brand-pill"><i class="fas fa-network-wired"></i> Web Tech</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+                    <a href="#capturas-txchannel" class="cert-link"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.85rem; background: rgba(255,255,255,0.1);"><i
+                            class="fas fa-images"></i> Ver Capturas</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CATEGORÍA 3: BASES DE DATOS & REPOSITORIOS (GITHUB) -->
+        <h3 style="color: var(--white); margin: 2.5rem 0 1rem 0;"><i class="fas fa-database"></i> Bases de Datos &
+            Recursos Educativos</h3>
+        <div class="projects-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+
+            <!-- SQL Práctico -->
+            <div class="project-card"
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 0.5rem;">SQL Práctico MySQL</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Ejercicios de SQL básico (SELECT, JOINs, Subconsultas)
+                        con soluciones y esquemas.</p>
+                    <div class="brand-pills" style="margin-top: 1rem;">
+                        <span class="brand-pill"><i class="fas fa-database"></i> MySQL 8+</span>
+                        <span class="brand-pill"><i class="fas fa-book"></i> Fundamentos</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://github.com/tu-usuario/sql-practico-mysql" target="_blank" rel="noopener"
+                        class="cert-link" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i
+                            class="fab fa-github"></i> Ver Repo en GitHub</a>
+                </div>
+            </div>
+
+            <!-- SQL Intermedio -->
+            <div class="project-card"
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 0.5rem;">SQL Intermedio Práctico</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Prácticas de SELECT avanzado, CTEs, Window Functions y
+                        esquemas relacionales.</p>
+                    <div class="brand-pills" style="margin-top: 1rem;">
+                        <span class="brand-pill"><i class="fas fa-database"></i> MySQL 8+</span>
+                        <span class="brand-pill"><i class="fas fa-code-branch"></i> CTEs & Windows</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://github.com/tu-usuario/sql-intermedio-practico" target="_blank" rel="noopener"
+                        class="cert-link" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i
+                            class="fab fa-github"></i> Ver Repo en GitHub</a>
+                </div>
+            </div>
+
+            <!-- SQL Avanzado -->
+            <div class="project-card"
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 0.5rem;">SQL Avanzado</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Guías de Stored Procedures, Triggers, Índices,
+                        Transacciones y Vistas.</p>
+                    <div class="brand-pills" style="margin-top: 1rem;">
+                        <span class="brand-pill"><i class="fas fa-server"></i> Transacciones</span>
+                        <span class="brand-pill"><i class="fas fa-bolt"></i> Triggers & Procedures</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://github.com/tu-usuario/sql-avanzado" target="_blank" rel="noopener"
+                        class="cert-link" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i
+                            class="fab fa-github"></i> Ver Repo en GitHub</a>
+                </div>
+            </div>
+
+            <!-- WordPress for Beginners -->
+            <div class="project-card"
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 0.5rem;">WordPress for Beginners</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Recursos y plantilla base para la iniciación en
+                        desarrollo con WordPress.</p>
+                    <div class="brand-pills" style="margin-top: 1rem;">
+                        <span class="brand-pill"><i class="fab fa-wordpress"></i> WordPress</span>
+                        <span class="brand-pill"><i class="fas fa-graduation-cap"></i> Docencia</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://github.com/tu-usuario/Wordpress-for-beginners-by-NayeliPaitan" target="_blank"
+                        rel="noopener" class="cert-link" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i
+                            class="fab fa-github"></i> Ver Repo en GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="divider" style="max-width:1100px;"></div>
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section id="educacion" class="reveal">
+        <div class="section-tag">// 05 — Educación & Certificaciones</div>
+        <h2 class="section-title">Formación <em>& Respaldos</em></h2>
+        <div class="section-line"></div>
+
+        <!-- Educación Principal -->
+        <div class="edu-card-main">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="edu-info">
+                <span class="edu-badge">En Curso · 10.° Ciclo</span>
+                <h3 class="edu-degree">Ingeniería de Sistemas e Informática</h3>
+                <p class="edu-inst">Universidad de Ciencias y Humanidades (UCH) · 🇵🇪 Lima, Perú</p>
+            </div>
+        </div>
+
+        <!-- Subtítulo de Certificaciones -->
+        <h3 class="sub-section-title">Certificaciones Destacadas</h3>
+
+        <!-- Grid de Certificados -->
+        <div class="cert-grid">
+
+            <!-- Stanford Code in Place -->
+            <div class="cert-card">
+                <div class="cert-header">
+                    <i class="fas fa-certificate cert-badge-icon"></i>
+                    <span class="cert-date">Jun 2026</span>
+                </div>
+                <h4 class="cert-title">Code in Place 2026</h4>
+                <p class="cert-issuer">Stanford University</p>
+                <div class="cert-skills">
+                    <span>Python</span><span>Data Structures</span>
+                </div>
+                <a href="https://codeinplace.stanford.edu/cip6/certificate/oybars" target="_blank"
+                    rel="noopener noreferrer" class="cert-link">
+                    Ver credencial <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <!-- Scrum Fundamentals -->
+            <div class="cert-card">
+                <div class="cert-header">
+                    <i class="fas fa-tasks cert-badge-icon"></i>
+                    <span class="cert-date">Ago 2026</span>
+                </div>
+                <h4 class="cert-title">Scrum Fundamentals Certified (SFC)</h4>
+                <p class="cert-issuer">SCRUMstudy / SIXD</p>
+                <div class="cert-skills">
+                    <span>Scrum</span><span>Agile</span>
+                </div>
+                <a href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-NayeliPaitanRamirez-1179823.pdf"
+                    target="_blank" rel="noopener noreferrer" class="cert-link">
+                    Ver PDF oficial <i class="fas fa-file-pdf"></i>
+                </a>
+            </div>
+
+            <!-- Certificación Coursera / IBM -->
+            <div class="cert-card">
+                <div class="cert-header">
+                    <i class="fab fa-ibm cert-badge-icon" style="font-size: 1.2rem; color: #054ada;"></i>
+                    <span class="cert-date">Abril 2026</span>
+                </div>
+                <h4 class="cert-title">Getting Started with Front-End and Web Development</h4>
+                <p class="cert-issuer">IBM & Coursera Verified Credential</p>
+                <div class="cert-skills">
+                    <span>IBM Skills Network</span><span>Front-End</span>
+                </div>
+                <a href="https://www.coursera.org/account/accomplishments/verify/UJ8EK4ETG0IS" target="_blank"
+                    rel="noopener noreferrer" class="cert-link">
+                    Ver Credencial en IBM / Coursera <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="divider"></div>
+    <!-- CONTACT -->
+    <section id="contacto" class="reveal">
+        <div class="section-tag">// 06 — Contacto</div>
+        <h2 class="section-title">Trabajemos <em>juntos</em></h2>
+        <div class="section-line"></div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+                <a class="contact-item" href="mailto:paitannayeli@gmail.com">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-details">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-val">paitannayeli@gmail.com</span>
+                    </div>
+                </a>
+
+                <a class="contact-item" href="https://wa.me/51994790316" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="contact-details">
+                        <span class="contact-label">WhatsApp</span>
+                        <span class="contact-val">(+51) 994 790 316</span>
+                    </div>
+                </a>
+
+                <a class="contact-item" href="https://linkedin.com/in/nayeli-alison-paitan-ramirez/" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <div class="contact-details">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-val">nayeli-alison-paitan-ramirez</span>
+                    </div>
+                </a>
+
+                <a class="contact-item" href="https://github.com/NayeliPaitan" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <div class="contact-details">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-val">NayeliPaitan</span>
+                    </div>
+                </a>
+
+                <div class="contact-item location-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-details">
+                        <span class="contact-label">Ubicación</span>
+                        <span class="contact-val">🇵🇪 Lima, Perú</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="contact-cta-box">
+                <div class="cta-glow"></div>
+                <h3>¿Tienes un proyecto en mente?</h3>
+                <p>Disponible para desarrollo web, automatizaciones con n8n, analítica de datos o proyectos de
+                    sistemas.
+                    ¡Construyamos algo increíble juntos!</p>
+
+                <div class="cta-buttons">
+                    <a href="mailto:paitannayeli@gmail.com" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Enviar correo
+                    </a>
+                    <a href="https://wa.me/51994790316" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-secondary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider" style="max-width:1100px;"></div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://linkedin.com/in/nayeli-alison-paitan-ramirez/" target="_blank" title="LinkedIn"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/NayeliPaitan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/51950595875" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:paitannayeli@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>Diseñado &amp; desarrollado con ☕ — <span> Nayeli Paitan · Blake Dev</span> © 2023 · Lima, Perú</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+
+  let width = (canvas.width = canvas.parentElement.clientWidth);
+  let height = (canvas.height = canvas.parentElement.clientHeight);
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = canvas.parentElement.clientWidth;
+    height = canvas.height = canvas.parentElement.clientHeight;
+  });
+
+  const mouse = { x: null, y: null, radius: 150 };
+
+  canvas.parentElement.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+
+  canvas.parentElement.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.vx = (Math.random() - 0.5) * 1.2;
+      this.vy = (Math.random() - 0.5) * 1.2;
+      this.radius = Math.random() * 2 + 1;
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+
+      if (this.x < 0 || this.x > width) this.vx *= -1;
+      if (this.y < 0 || this.y > height) this.vy *= -1;
+
+      if (mouse.x !== null && mouse.y !== null) {
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < mouse.radius) {
+          const angle = Math.atan2(dy, dx);
+          const force = (mouse.radius - distance) / mouse.radius;
+          this.x -= Math.cos(angle) * force * 3;
+          this.y -= Math.sin(angle) * force * 3;
+        }
+      }
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = '#00f2fe';
+      ctx.fill();
+    }
+  }
+
+  const particleCount = Math.floor((width * height) / 10000);
+  const particles = Array.from({ length: particleCount }, () => new Particle());
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].update();
+      particles[i].draw();
+
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < 120) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(0, 242, 254, ${1 - distance / 120})`;
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+</body>
+
+</html>
