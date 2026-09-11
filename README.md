@@ -39,11 +39,18 @@ Si deseas clonar y ejecutar este proyecto localmente en tu máquina:
 3. Abre la aplicación:
 Abre el archivo index.html en tu navegador de preferencia o utiliza la extensión Live Server en Visual Studio Code.
 
-3. 📬 Contacto - Nayeli Paitan
+---
 
-LinkedIn: https://www.linkedin.com/in/nayeli-alison-paitan-ramirez/
+## 📫 Contact
 
-GitHub: @NayeliPaitan
+- 💼 LinkedIn: https://www.linkedin.com/in/nayeli-alison-paitan-ramirez/
+- 📧 Email: paitannayeli@gmail.com
+<p align="left"> 
+  <a href="https://www.linkedin.com/in/nayeli-alison-paitan-ramirez/" target="_blank"> <img src="https://skillicons.dev/icons?i=linkedin" height="40"/> </a> 
+  <a href="mailto:paitannayeli@gmail.com"> <img src="https://skillicons.dev/icons?i=gmail" height="40"/> </a> 
+  <a href="https://github.com/NayeliPaitan"> <img src="https://skillicons.dev/icons?i=github" height="40"/> </a> 
+  <a href="https://gitlab.com/paitannayeli"> <img src="https://skillicons.dev/icons?i=gitlab" height="40"/> </a> 
+  <a href="https://www.instagram.com/nayeli.paitan/"> <img src="https://skillicons.dev/icons?i=instagram" height="40"/> </a> 
+  <a href="mailto:paitannayeli@gmail.com"> <img src="https://skillicons.dev/icons?i=discord" height="40"/> </a> 
 
-📜 Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más información.
+⭐ Always learning. Always building.
