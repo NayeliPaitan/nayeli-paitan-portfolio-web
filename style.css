@@ -1013,7 +1013,7 @@ a.contact-item:hover {
 
     body.nav-open::after {
         content: '';
-        position: fixed;
+        position: fixed; 
         inset: 0;
         background: rgba(4, 8, 20, 0.55);
         z-index: 140;

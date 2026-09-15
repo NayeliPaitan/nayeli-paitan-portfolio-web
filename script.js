@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle.addEventListener('click', () => {
       const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
       isOpen ? closeMenu() : openMenu();
-    });
+    }); 
 
     // Cierra el menú al hacer clic en un enlace
     navMenu.querySelectorAll('a').forEach(link => {
